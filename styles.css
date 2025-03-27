@@ -1,0 +1,612 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+/* Background image for all pages */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0)), 
+                url('/static/images/background1.jpg') no-repeat center center/cover;
+    z-index: -1;
+}
+
+/* Consistent Button Styling */
+.blue-button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.blue-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Ensure the container aligns buttons properly */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centers the buttons */
+    gap: 20px; /* Space between buttons */
+    margin-top: 20px;
+}
+
+/*DASHBOARD*/
+/* Dashboard Styling */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: #f8f9fa;;
+    text-align: center;
+}
+
+/* Dashboard Title */
+.dashboard-container h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #e3e3e3; /* Light Gray Instead of White */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.744);
+}
+
+/* Dashboard Subtitle */
+.dashboard-container h2 {
+    font-size: 50px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+/* Button Container */
+.dashboard-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Dashboard Buttons */
+.dashboard-buttons a {
+    background-color: #ffffff;
+    color: #1e3c72;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-buttons a:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.05);
+}
+
+/* Logout Button (Different Color) */
+.dashboard-buttons .logout {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.dashboard-buttons .logout:hover {
+    background-color: #cc0000;
+}
+
+
+
+/*ADD MEMBER PAGE*/
+/* Center the form on the page */
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Form box styling */
+.register-form-box {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    
+
+}
+
+/* Form styling */
+.register-form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+}
+
+/* Labels */
+.register-form label {
+    font-weight: bold;
+    text-align: left;
+    margin-top: 20px;
+    display: block;
+}
+
+/* Input fields */
+.register-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Submit button with consistent blue styling */
+.register-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.register-form button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Apply styles only if the body has class "login-page" */
+.login-page {
+    font-family: Arial, sans-serif;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+
+
+/* Main title styling */
+.main-title {
+    font-size: 50px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Login form styling */
+.login-page form {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    gap: 15px;
+}
+
+.login-blue-button{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: 0.3s;
+    margin-top: 0px; /* Ensures spacing between fields and button */
+    width: 50%; /* Makes button same width as input fields */
+    display: block;
+    margin-left: auto; /* Centers button */
+    margin-right: auto; /* Centers button */
+}
+
+.blue-button-register:hover {
+    background-color: #0056b3;
+}
+
+/*Member Classes Styling*/
+/* Table Styling */
+.class-table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.class-list-box {
+    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+/* Table Formatting */
+.class-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.class-table th {
+    background-color: rgba(0, 123, 255, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.class-table td, .class-table th {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.class-table tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/*Register Class Page Styling*/
+/* Center Container */
+.register-class-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Box Styling */
+.register-class-box {
+    background-color: rgba(255, 255, 255, 0.9); /* Visible white */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    border: 2px solid rgba(0, 0, 0, 0.2); /* Visible border */
+}
+
+/* Form Styling */
+.register-class-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Align Label and Select */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group select {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: white;
+    text-align: center;
+}
+
+/* Button Container to Align Center */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* Button Styling */
+.register-class-form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.register-class-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Back Link */
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    background-color: #0056b3;
+}
+
+/* Register Member Page Styling */
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Form Container */
+.register-form-box {
+    background-color: rgba(255, 255, 255, 0.95); /* More visible white */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Form Styling */
+.register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form label {
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.register-form input, 
+.register-form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.blue-button-register {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: 0.3s;
+    margin-top: 20px; /* Ensures spacing between fields and button */
+    width: 50% /* Makes button same width as input fields */
+    
+}
+
+.blue-button-register:hover {
+    background-color: #0056b3;
+}
+
+/* Submit Button */
+.register-form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.register-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Back Link */
+.back-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    background-color: #0056b3;
+}
+
+
+/* View Member Page Styling */
+.view-member-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Transparent container for member list */
+.member-list-container {
+    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent */
+    padding: 30px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 80%;
+    max-width: 900px;
+}
+
+/* Styling the table */
+.member-list-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Table headers */
+.member-list-container th {
+    background-color: rgba(0, 123, 255, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Table rows */
+.member-list-container td, .member-list-container th {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Alternate row color */
+.member-list-container tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Buttons */
+.member-list-container button {
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.member-list-container button:hover {
+    background-color: #c82333;
+}
+
+/* Links */
+.member-list-container a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.member-list-container a:hover {
+    text-decoration: underline;
+}
+
+/* Spacing for navigation links */
+.view-member-container a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.view-member-container a:hover {
+    background-color: #0056b3;
+}
+
+/* View Classes Page Styling */
+.class-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Transparent container for the class list */
+.class-list-box {
+    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+    padding: 20px;
+    border-radius: 15px; /* Rounded edges */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Styling for the class list */
+.class-list-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.class-list-box li {
+    background-color: rgba(0, 0, 0, 0.05); /* Slightly darker for contrast */
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Back to dashboard button */
+.class-list-container a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.class-list-container a:hover {
+    background-color: #0056b3;
+}

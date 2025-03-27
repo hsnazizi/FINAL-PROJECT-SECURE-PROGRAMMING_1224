@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>View Classes</title>
+</head>
+<body class="class-list-container">
+    <div class="class-list-box">
+    <h1>Classes List</h1>
+    <ul>
+        {% for class in classes %}
+            <li>{{ class[1] }} - {{ class[2] }}</li>
+        {% endfor %}
+    </ul>
+    </div>
+    <br>
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Add Member</title>
+</head>
+<body class="register-container">
+    <h1>Add Member</h1>
+
+    <div class="register-form-box">
+    <form method="POST" class="register-form">
+        <input type="text" name="name" placeholder="Member Name" required>
+        <input type="text" name="status" placeholder="Membership Status" required>
+        <button type="submit" class="blue-button">Add Member</button>
+    </form>
+</body>
+</html>
